@@ -1,3 +1,54 @@
+# y_scriptinit
+
+Provides several new initialisation callbacks to avoid knowing what the current script type is.  The full initialisation order is:
+
+* `OnCodeInit` - Called first to generate code.  No advanced YSI features are available here (including hooking this callback).
+* `OnJITCompile` - If this is running in the JIT.
+* `PREINIT__` - Special init functions, used for tiny setup code (more light-weight than hooks).
+* `OnScriptInit` - Called when this script starts.  This is the most important callback as it is called once first, regardless of the script type, and all YSI features are now available.
+* `POSTINIT__` - Special init functions, used for tiny setup code (more light-weight than hooks).
+* `OnFilterScriptInit` - If this is a filterscript.
+* `OnGameModeInit` - Once in a gamemode, possibly multiple times in a filterscript.
+
+The shutdown order is:
+
+* `OnGameModeExit` - Once in a gamemode, possibly multiple times in a filterscript.
+* `OnFilterScriptExit` - If this is a filterscript.
+* `OnScriptExit` - Called when this script ends, regardless of the type.
+
+
+[![sampctl](https://shields.southcla.ws/badge/sampctl-y_scriptinit-2f2f2f.svg?style=for-the-badge)](https://github.com/YSI-Server/y_scriptinit)
+
+## Installation
+
+To install just this one library:
+
+```bash
+sampctl package install YSI-Server/y_scriptinit
+```
+
+Include in your code and begin using the library:
+
+```pawn
+#include <YSI-Server/y_scriptinit>
+```
+
+## Documentation
+
+* [Quick Start](YSI-Server/y_scriptinit/quick-start.md) - One very simple example of getting started with this library.
+* [Features](YSI-Server/y_scriptinit/features.md) - More features and examples.
+* [FAQs](YSI-Server/y_scriptinit/faqs.md) - Frequently Asked Questions, including errors and solutions.
+* [API](YSI-Server/y_scriptinit/api.md) - Full list of all functions and their meaning.
+* [Internal](YSI-Server/y_scriptinit/internal.md) - Internal developer documentation for the system.
+
+## Testing
+
+To test, simply run the package:
+
+```bash
+sampctl package run
+```
+
 # YSI
 
 ## General Information
@@ -109,34 +160,4 @@ Libraries that have in-game visible effects.
 * [y_races](https://github.com/YSI-Visual/y_races/blob/dev/YSI-Visual/y_races.md)
 * [y_zonenames](https://github.com/YSI-Visual/y_zonenames/blob/dev/YSI-Visual/y_zonenames.md)
 * [y_zonepulse](https://github.com/YSI-Visual/y_zonepulse/blob/dev/YSI-Visual/y_zonepulse.md)
-
-# y_scriptinit
-
-[![sampctl](https://shields.southcla.ws/badge/sampctl-y_scriptinit-2f2f2f.svg?style=for-the-badge)](https://github.com/YSI-Server/y_scriptinit)
-
-## Installation
-
-To install just this one library:
-
-```bash
-sampctl package install YSI-Server/y_scriptinit
-```
-
-Include in your code and begin using the library:
-
-```pawn
-#include <YSI-Server/y_scriptinit>
-```
-
-## Usage
-
-[Click Here] (YSI-Server/y_scriptinit.md)
-
-## Testing
-
-To test, simply run the package:
-
-```bash
-sampctl package run
-```
 
