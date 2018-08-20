@@ -1,0 +1,9 @@
+{
+	"user": "YSI-Server",
+	"repo": "y_scriptinit",
+	"entry": "test.pwn",
+	"output": "test.amx",
+	"dependencies": [
+	]
+}
+
