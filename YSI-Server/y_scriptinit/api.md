@@ -104,7 +104,7 @@ When defined enables the `final` keyword:
 final gMaxPlayers = GetMaxPlayers();
 ```
 
-See [YSI_COMPATIBILITY_MODE](../../YSI_COMPATIBILITY_MODE.md) for more information.
+See [YSI_COMPATIBILITY_MODE](../../../YSI_COMPATIBILITY_MODE.md) for more information.
 
 ## `YSI_NO_KEYWORD_final`
 
@@ -119,7 +119,7 @@ When defined disables the `final` keyword:
 final gMaxPlayers = GetMaxPlayers(); // Error.
 ```
 
-See [YSI_COMPATIBILITY_MODE](../../YSI_COMPATIBILITY_MODE.md) for more information.
+See [YSI_COMPATIBILITY_MODE](../../../YSI_COMPATIBILITY_MODE.md) for more information.
 
 # Callbacks
 
