@@ -4,6 +4,19 @@
 	"entry": "test.pwn",
 	"output": "test.amx",
 	"dependencies": [
-	]
+		"YSI-Internal/y_core"
+	],
+	"dev_dependencies": [
+		"YSI-Core/y_testing"
+	],
+	"runtime": {
+		"version": "0.3.7",
+		"mode": "server",
+		"echo": "-",
+		"rcon_password": "password",
+		"port": 7777,
+		"hostname": "SA-MP Server",
+		"maxplayers": 50,
+		"language": ""
+	}
 }
-
